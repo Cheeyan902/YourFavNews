@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 
 import 'source.dart';
 
+//ignore: must_be_immutable
 class NewsModel extends Equatable {
   final Source? source;
   final String? author;
@@ -40,7 +41,7 @@ class NewsModel extends Equatable {
 
   factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
         source: Source.fromJson(json['source'] as Map<String, dynamic>),
-        author: json['author'] as String? ?? 'CNN Indonesia',
+        author: json['author'] as String? ?? 'CNN Malaysia',
         title: json['title'] as String? ?? '',
         description: json['description'] as String? ?? '',
         url: json['url'] as String? ?? '',

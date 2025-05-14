@@ -13,9 +13,10 @@ import 'home_widgets.dart';
 
 class NewsDetailsAppBar extends StatelessWidget {
   const NewsDetailsAppBar({
-    Key? key,
+    super.key,
     required this.newsModel,
-  }) : super(key: key);
+  });
+
   final NewsModel newsModel;
 
   @override
@@ -55,7 +56,7 @@ class NewsDetailsAppBar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const CategoryWidget(),
+                  CategoryWidget(newsModel: newsModel),
                   15.0.spaceY,
                   SizedBox(
                     width: context.width * 0.8,

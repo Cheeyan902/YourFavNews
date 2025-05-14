@@ -5,6 +5,7 @@ import '../../features/bookmark/presentation/manager/bookmark_cubit/bookmark_cub
 import '../../features/home/data/models/models.dart';
 import '../../features/home/presentation/view/nav_bar.dart';
 import '../../features/home/presentation/view/news_details_screen.dart';
+import '../../features/home/presentation/view/setting_screen.dart'; // import your theme provider
 
 abstract class AppRouter {
   static const initialRoute = '/';
@@ -24,6 +25,10 @@ abstract class AppRouter {
             newsModel: state.extra as NewsModel,
           ),
         ),
+      ),
+      GoRoute(
+        path: '/settings',
+        builder: (context, state) => const SettingScreen(), // ✅ this is public
       ),
     ],
   );

@@ -6,6 +6,7 @@ import '../../../../core/errors/failures.dart';
 import '../../../../core/utils/api_service.dart';
 import '../models/news_model/news_model.dart';
 import 'home_repo.dart';
+import 'dart:math';
 
 class HomeRepoImpl implements HomeRepo {
   final ApiService apiService;
@@ -19,7 +20,7 @@ class HomeRepoImpl implements HomeRepo {
         queryParameters: {
           'country': 'us',
           'page': 1,
-          'pageSize': 4,
+          'pageSize': 7,
           'apiKey': AppConstants.apiKey,
         },
       );
@@ -29,7 +30,7 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(breakingNews);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure(e.toString()));
       }
       return left(ServerFailure(e.toString()));
@@ -43,8 +44,8 @@ class HomeRepoImpl implements HomeRepo {
         endPoint: 'everything',
         queryParameters: {
           'q': 'recommended',
-          'page': 1,
-          'pageSize': 10,
+          'page': Random().nextInt(4) + 1,
+          'pageSize': 16,
           'apiKey': AppConstants.apiKey,
         },
       );
@@ -54,7 +55,7 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(recommendedNews);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure(e.toString()));
       }
       return left(ServerFailure(e.toString()));
@@ -80,7 +81,7 @@ class HomeRepoImpl implements HomeRepo {
       }
       return right(searchResult);
     } catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure(e.toString()));
       }
       return left(ServerFailure(e.toString()));

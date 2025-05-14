@@ -8,7 +8,7 @@ class Source extends Equatable {
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
         id: json['id'] as String? ?? '',
-        name: json['name'] as String? ?? 'CNN Indonesia',
+        name: json['name'] as String? ?? 'CNN Malaysia',
       );
 
   Map<String, dynamic> toJson() => {

@@ -4,13 +4,20 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.5 <3.0.0'
+    sdk: ">=3.0.6 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+
+  permission_handler: ^12.0.0+1
   cupertino_icons: ^1.0.2
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
+  flutter_local_notifications: ^19.0.0
+  provider: ^6.0.0
+  flutter_timezone: ^4.1.0
+  timezone: ^0.10.0
+  http: ^1.1.0
   persistent_bottom_nav_bar_v2: ^4.2.8
   cached_network_image: ^3.2.3
   go_router: ^6.5.3
@@ -20,46 +27,24 @@ dependencies:
   dio: ^5.1.1
   get_it: ^7.2.0
   dartz: ^0.10.1
-  intl: ^0.18.0
+  intl: ^0.19.0
   shimmer: ^2.0.0
   url_launcher: ^6.1.10
+  win32: ^5.3.0  # Update to the latest version if available
+  archive: ^3.5.0  
+  logger: ^2.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  fonts:
+    - family: Playful
+      fonts:
+        - asset: lib/Lilita_One/LilitaOne-Regular.ttf  # Path to your font file

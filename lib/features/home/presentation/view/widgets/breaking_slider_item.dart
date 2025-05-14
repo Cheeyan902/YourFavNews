@@ -64,7 +64,7 @@ class BreakingSliderItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const CategoryWidget(),
+                    CategoryWidget(newsModel: newsModel),
                     const Spacer(),
                     InfoItem(newsModel: newsModel),
                     SizedBox(

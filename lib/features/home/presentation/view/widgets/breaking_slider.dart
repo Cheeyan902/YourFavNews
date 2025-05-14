@@ -60,7 +60,7 @@ class _BreakingSliderState extends State<BreakingSlider> {
                         height: 12.0,
                         margin: const EdgeInsets.symmetric(
                           vertical: 8.0,
-                          horizontal: 4.0,
+                          horizontal: 6.0,
                         ),
                         decoration: BoxDecoration(
                           // shape: BoxShape.circle,

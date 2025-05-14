@@ -26,7 +26,7 @@ class InfoItem extends StatelessWidget {
         (context.width * 0.01).spaceX,
         const Icon(
           Icons.verified,
-          color: CupertinoColors.activeBlue,
+          color: CupertinoColors.activeGreen,
           size: 20,
         ),
         (context.width * 0.02).spaceX,

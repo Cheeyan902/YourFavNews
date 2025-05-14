@@ -7,6 +7,7 @@ import 'package:news_challenge/core/utils/extensions.dart';
 import '../../../../../core/utils/assets_manager.dart';
 import '../../../../../core/utils/router.dart';
 import '../../../data/models/models.dart';
+import '../../../data/models/news_category_extensions.dart';
 
 class RecNewsItem extends StatelessWidget {
   const RecNewsItem({
@@ -57,9 +58,9 @@ class RecNewsItem extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      const Text(
-                        'Sports',
-                        style: TextStyle(
+                     Text(
+                        newsModel.inferredCategory, // This is the dynamic value
+                        style: const TextStyle(
                           color: Colors.grey,
                         ),
                       ),

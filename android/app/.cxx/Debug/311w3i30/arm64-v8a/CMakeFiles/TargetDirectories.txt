@@ -1,0 +1,2 @@
+C:/MC/Individual Assignment - News App/News-Challenge/android/app/.cxx/Debug/311w3i30/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/MC/Individual Assignment - News App/News-Challenge/android/app/.cxx/Debug/311w3i30/arm64-v8a/CMakeFiles/rebuild_cache.dir

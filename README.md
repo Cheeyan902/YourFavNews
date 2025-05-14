@@ -18,6 +18,6 @@ News App With Flutter & [News API](https://newsapi.org/)
 
 **Client**: Flutter, Bloc(Cubit)
 
-**Architecture pattern**: MVVM
+**Architecture pattern**: Three-tier architecture
 
-**DI** -> GetIt package
+**Development**: Android Studio
